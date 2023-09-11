@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: lion-app
+    labels:
+      app: lion-app
+spec:
+    imagePullSecrets:
+        - name: regcred
+    containers:
+        - name: lion-app
+          image: likelion-cr-jh.kr.ncr.ntruss.com/lion-app:sqlite
+          imagePullPolicy: Always #이미지 이름 같아도 받아옴
+          env:
+              - name: DJANGO_SETTINGS_MODULE
+                value: lion_app.settings.test
+              - name: DJANGO_SECRET_KEY
+                value: django-insecure-&vvoc_%f(dy)6=c*r!8=8rnbd!jjw*(to6z($wpt-8ot=bnexq
+          ports:
+              - containerPort: 8000
