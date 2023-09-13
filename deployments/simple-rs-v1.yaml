@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: lion-app
+  name: web-v1
   labels:
-    app: lion-app
+    app: web-v1
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: lion-app
+      app: web-v1
   template:
     metadata:
       labels:
-        app: lion-app
+        app: web-v1
     spec:
       containers:
-        - name: lion
+        - name: web-v1
           image: teacherssamko/simple-web:v1
           ports:
             - containerPort: 8000
-

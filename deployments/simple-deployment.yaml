@@ -19,6 +19,10 @@ spec:
           image: teacherssamko/simple-web:v1
           ports:
             - containerPort: 8000
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8000
 ---
 apiVersion: v1
 kind: Service
