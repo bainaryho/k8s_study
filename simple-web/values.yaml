@@ -1,0 +1,7 @@
+image:
+  repository: teacherssamko/simple-web:v1
+  tag: v1
+  pullPolicy: true
+
+replicas: 3
+spectype: "LoadBalancer"
