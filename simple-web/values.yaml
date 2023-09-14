@@ -1,7 +1,9 @@
 image:
-  repository: teacherssamko/simple-web:v1
-  tag: v1
-  pullPolicy: true
+  repository: teacherssamko/simple-web
+  pullPolicy: IfNotPresent
+  tag: ""
 
 replicas: 3
-spectype: "LoadBalancer"
+
+service:
+  type: LoadBalancer
