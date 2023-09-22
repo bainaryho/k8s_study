@@ -1,6 +1,6 @@
 apiVersion: v2
-name: lion #이름
-description: lion-app #설명
+name: lion
+description: lion-app
 type: application
-version: 0.1.0 #버전
-appVersion: "0.1.0"
+version: 0.1.3
+appVersion: "0.1.4"

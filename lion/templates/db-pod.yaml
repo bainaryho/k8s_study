@@ -19,7 +19,14 @@ spec:
       volumeMounts:
         - mountPath: "/var/lib/postgresql/data"
           name: postgres-data
+      resources:
+        requests:
+          memory: "64Mi"
+          cpu: "250m"
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
   volumes:
     - name: postgres-data
       persistentVolumeClaim:
-        claimName: db-pod-pvc
+        claimName: {{ include "lion.db.fullname" . }}
